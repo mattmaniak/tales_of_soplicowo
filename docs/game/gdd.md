@@ -72,40 +72,59 @@ by Mateusz Maniak
    The less the better.
 
 ## <a id='characters'></a>Characters
-Every character should be somehow archetypic.
+There should be 16 characters, including the players. Each of them should be connected with 1-2 of the 12 Jungian archetypes.
 
 1. ### <a id='player'></a>Player
    - **Father Robak** a.k.a. **Jacek Soplica** - a catholic priest, ex-vagrant.
 2. ### <a id='npcs'></a>NPCs
-   - **Protazy Brzechalski**
+   - **Protazy Brzechalski**.
    - **Tadeusz Soplica** - title character
    - **Judge Soplica** - mentor archetype - conservative Pole stereotype.
    - **Jankiel** - local Jew.
    - **Telimena** - seductress archetype - *femme fatale*.
-   - **Zosia Horeszko** - maiden archetype - Tadeusz's crush.
-   - **Gerwazy Rębajło**
+   - **Zosia Horeszkówna** - maiden archetype - Tadeusz's crush.
+   - **Gerwazy Rębajło**.
    - **Count Horeszko** - Dandelion from *The Witcher*.
    - **Major Płut** - Russian officer of Polish descent.
-   - **Count's Jockeys** - two French-like horsemen.
+   - **Count's Jockey** - a French-like horseman.
+   - **Wojski Hreczecha**
+   - **Podkomorzy**.
+   - **Rejent Bolesta**.
+   - **Asesor**.
+   - **Maćko Dobrzyński**.
+   - **Maciej Konewka**.
+   - **Maciek Chrzciciel**.
+   - **Bartek Brzytewka**.
+   - **Captain Nikita Rykow**.
+
+
 
 ## <a id='world'></a>World
 Closed but with various options to achieve a destination. Internal legacy prototype `mapa_w_skali_v2.jpg` is a good initial reference for a level design.
 
 1. ### <a id='map'></a>Map
-   Contains some levels on the single map. It will be important storytelling and reputation system component too - some places will be unavailable, while other will be available according to the player choices. This will provide gameplay nonlinearity.
+   Contains some levels on the single map. It will be important storytelling and reputation system component too - some places will be unavailable, while other will be available according to the player choices. This will provide gameplay nonlinearity. Each level will be symbolic and will be uniqely different.
 2. ### <a id='levels'></a>Levels
    - Level 1
    - Level 2.
 
 ## <a id='gameplay'></a>Gameplay
-The player acts as a priest whose goals is to go through the quests which are strictly related with Polish noble-class and *Sir Thaddeus* events. The goal is to persuade them to reunion. It will be done via helping them during various tasks from the Mickiewicz's book and deep talks about the Commonwealth. Optionally, the player will have to find and repair chapels. To solve those problems, player will have to explore levels and solve engaging puzzles.
+The player acts as a priest whose goals is to go through the quests which are strictly related with Polish noble-class and *Sir Thaddeus* events. The goal is to persuade them to reunion. It will be done via helping them during various tasks from the Mickiewicz's book and deep talks about the Commonwealth. Optionally, the player will have to find and repair chapels.
+
+To solve those problems, player will have to explore levels and solve engaging puzzles. They will be somehow connected with a camera's fixed pitch and base on the problem of getting into some kind of relatively complex place.
+
+Note that each further puzzle and dialogue should be harder to provide a progressive difficulty.
+
+The gameplay will be a little modular only, as there will be puzzle solving and NPCs conversations as the cores. Both mechanics modules will overlap.
+
+Both mechanics will be expressive for the player by their nonlinearity, so the player will be able to choose own way and behave in-game as he/she intends.
 
 1. ### <a id='core-gameplay-loop'></a>Core Gameplay Loop
    1. Enter and explore level a little.
    2. Deep talk with quest owner who explains the problem. 
    3. Go to a specified place to find a solution.
    4. Solve environmental puzzles and optionally fix chapel.
-   5. Short talk with NPC that thanks for the help and informs about a next job.
+   5. Short talk with NPC that thanks for the help and informs about a next job seamlessly.
 
 2. ### <a id='core-number'></a>Core Number
    Core number of the game should be 2 multiplications to symbolise a dualism everywhere, eg. there should be two ways to get into an area, two dialogue answers...
@@ -120,7 +139,7 @@ The player acts as a priest whose goals is to go through the quests which are st
      - Auto save during specific story moments.
      - *Press any button to continue* after loading screens.
    - **Sould have**:
-     - Day-night cycle.
+     - Day-night cycle that changes gameplay and consequences (probably makes worse).
      - All unique *Sir Thaddeus* characters.
      - In-door visibility - transparent portal on player or buildings half-transparency.
      - Basic in-game menu with: map, reputation graph, skills and current quest description.
@@ -141,12 +160,20 @@ The player acts as a priest whose goals is to go through the quests which are st
    Story-related.
 
 5. ### <a id='statistics-of-the-player'></a>Statistics of the Player
-   The game shouldn't be explicit with stats displaying them by numbers. Instead, it should use some graphs and mainly storytelling to show characters' parameters. Here comes the *show, don't tell* rule.
+   The game shouldn't be explicit with stats displaying them by numbers. Instead, it should use some graphs and mainly storytelling to show characters' parameters. Here comes the *show, don't tell* rule. Optionally, there will be a reversed triangle that symbolises main character's attitude. Center will be the initial neutrals state. Left corner will symbolise Horeszko family, while right one - Soplicas. Collaboration with Russians will be placed at the bottom. As the protagonist is one of the Soplicas, player's attitude may be prejudiced, however to reconceal noblemen and thus succeed, neutrality will be necessary. Those attitudes will be the essence of the RPG loyality system, however it may judge player's morality so it should be considered deeply before optional implementation.
 
 ## <a id='Story'></a>Story
-There is no distiction between and side jobs to simplify implementation. There will be only nonlinear main quests whose will have optional tasks sometimes to provide more diverse choices and consequences.
+There is no distiction between and side jobs to simplify implementation. There will be nonlinear main quests only whose will have optional tasks sometimes to provide more diverse choices and consequences.
+
+4 various endings: The Blind Man (Soplicas), The Lawful Evil (Horeszkos), The Collaborant (Russians), and The Reconciler (neutral but the best).
+
 - ### <a id='quests-and-their-ids'></a>Quests and their IDs
-  0. Deeply engaging guest.
+  0. Some kind of intuitive and immersive tutorial to provide an **intro**.
+  1. A little harder quest to create an **exposition** and speed-up **pacing**.
+  2. Harder quest with a **rising action**.
+  3. Final hard quest that becomes a **climax**.
+  4. A slowdown and player's Catharsis.
+  5. A short cutscene/gameplay event as a final conclusion. 
 
 ## <a id='sound'></a>Sound
 1. ### <a id='sfx'></a>Sound Effects
@@ -158,4 +185,4 @@ There is no distiction between and side jobs to simplify implementation. There w
 3D low poly pixel art, where pixels are used only for details. Meshes and the textures' context are classicaly flat. Rich post-processing can be easily achieved due the Render Pipeline.
 
 ## <a id='accessibility'></a>Accessibility
-Each in-game feedback is expressed via at least two sensitive events, eg. dialogues use subtitles and narrator, enemies distraction - some character outline and a proper sound. Visual effects change it's shape, not color only to provide meaningful experience also for color-blind people. Most of the information is shown using mix of various visual and sound effects.
+Each in-game feedback is expressed via at least two sensitive events, eg. dialogues use subtitles and narrator, enemies distraction - some character outline and a proper sound. Visual effects change it's shape, not color only to provide meaningful experience also for color-blind people. Most of the information is shown using mix of various visual and sound effects. Also the game should support at least custom mappings for: keyboard + mouse and Xbox, PlayStation pads. Game controls should be as much analogue as possible, eg. triggers on pads. The game should contain full colorblind-friendly only visuals optionally.
