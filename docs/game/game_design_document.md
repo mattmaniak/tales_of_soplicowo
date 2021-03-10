@@ -21,39 +21,43 @@ by Mateusz Maniak
   2. [NPCs](#npcs)  
 - [World](#world)  
   1. [Map](#map)  
-  2. [Levels and their IDs](#levels-and-their-ids)  
+  2. [Levels](#levels)  
 - [Gameplay](#gameplay)  
-  1. [Core Gameplay Loop](#core-gameplay-loop)
-  2. [Core Number](#core-number)
-  3. [MoSCoW analysis of mechanics](#moscow-analysis-of-mechanics)
-  4. [Prizes](#Prizes)
-  5. [Enjoyable Failures](#enjoyable-failures)
-  6. [Statistics of the Player](#statistics-of-the-player)
+  1. [Key Mechanics](#key-mechanics)
+  2. [Core (Low-level) Loop](#core-low-level-loop)
+  3. [High-level Loop](#high-level-loop)
+  4. [Core Number](#core-number)
+  5. [MoSCoW analysis of mechanics](#moscow-analysis-of-mechanics)
+  6. [Winning and Losing](#winning-and-losing)
+  7. [Prizes](#prizes)
+  8. [Statistics of the Player](#statistics-of-the-player)
 - [Story](#Story)
-  - [Events/Books](#events-books)  
-  - [Quests and their IDs](#quests-and-their-ids)  
-  - [Endings and their IDs](#endings-and-their-ids)  
+  1. [Timeline](#timeline)  
+  2. [Events/Books](#events-books)  
+  3. [Quests](#quests)  
+  4. [Endings](#endings)  
 - [Graphics](#graphics)  
+  1. [Art Direction](art-direction)  
 - [Sound](#sound)  
-  1. [Sound Effects](sfx)  
-  2. [Music](#music)  
+  1. [Music](#music)  
+  2. [Effects](#effects)  
 - [Accessibility](#accessibility)  
 
 ## <a id='description'></a>Description
 1. ### <a id='motto'></a>Motto
-   Unite them all/Fight with word like a sword/Unite with word, not a sword.
+   Fight with word like a sword/Unite with word, not a sword.
 
 2. ### <a id='logline'></a>Logline
    Play as a 19th-century priest whose goal is to reunite Polish noble-class in order to prepare uprising against Russian. Use word as a sword and try to persuade them. Will you succeed?
 
 3. ### <a id='genre'></a>Genre
-   Adventure RPG.
+   Adventure with RPG elements.
 
 4. ### <a id='objective'></a>Objective
-   Do some open-source in game development.
+   Do some open-source in game development. Create game for the people.
 
 5. ### <a id='setting'></a>Setting
-   Soplicowo.
+   Occupied Lithuanian areas of 1811.
 
 6. ### <a id='plot'></a>Plot
    Taduesz backs to Soplocowo from Vilnus. This causes the castle conflict again. His father - Priest Robak has to help Soplicas get the castle. However, some things go wrong during his journey and Horeszkos' are preparing some big too.
@@ -109,19 +113,20 @@ Closed but with various options to achieve a destination. Internal legacy protot
 1. ### <a id='map'></a>Map
    Contains some levels on the single map. It will be important storytelling and reputation system component too - some places will be unavailable, while other will be available according to the player choices. This will provide gameplay nonlinearity. Each level will be symbolic and will be uniqely different.
 
-2. ### <a id='levels-and-their-ids'></a>Levels and their IDs
-   0. Soplicowo - starting point, hub world, maybe.
-   1. Horeszko's Castle.
-   2. Forest.
-   3. Jankiel's Inn.
-   4. Another forest.
-   5. Horeszko's Castle.
-   6. Soplicowo.
+2. ### <a id='levels'></a>Levels
+   1. Chapel.
+   2. Soplicowo - starting point, hub world, maybe.
+   3. Horeszko's Castle.
+   4. Forest.
+   5. Jankiel's Inn.
+   6. Bear's Forest.
    7. Horeszko's Castle.
-   8. Dobrzyn.
-   9. Sopliciwo.
+   8. Soplicowo.
+   9. Count's Palace.
    10. Dobrzyn.
-   11. Soplicowo - ending point.
+   11. Sopliciwo.
+   12. Dobrzyn.
+   13. Soplicowo - ending point.
 
 ## <a id='gameplay'></a>Gameplay
 The player acts as a priest whose goals is to go through the quests which are strictly related with Polish noble-class and *Sir Thaddeus* events. The goal is to persuade them to reunion. It will be done via helping them during various tasks from the Mickiewicz's book and deep talks about the Commonwealth. Optionally, the player will have to find and repair chapels.
@@ -136,21 +141,29 @@ Both mechanics will be expressive for the player by their nonlinearity, so the p
 
 It will be somehow mix of systemic and directed approach: on the one hand, it will allow player to use mechanics on their own, like various exploration possibilities and dialogue choices, on the other hand, the game won't have much mechanics (above two only) so the directed approach will be present too.
 
-1. ### <a id='core-gameplay-loop'></a>Core Gameplay Loop
-   Core but high-level. Maybe a separate low-level description is needed too.
+1. ### <a id='key-mechanics'></a>Key Mechanics
+   - NPCs are ghosts, explore labirynth to find a way to overhear them.
+   - Talk with them using your son, Tadeusz, as a medium.
+
+2. ### <a id='#core-low-level-loop'></a>Core (Low-level) Loop
+   1. Walk.
+   2. Go Back.
+   3. Repeat.
+
+3. ### <a id='high-level-loop'></a>High-level Loop
    1. Enter and explore level a little.
    2. Deep talk with quest owner who explains the problem. 
    3. Go to a specified place to find a solution.
    4. Find a path through a labirynth and optionally fix chapel.
    5. Short talk with NPC that thanks for the help and informs about a next job seamlessly.
 
-2. ### <a id='core-number'></a>Core Number
+4. ### <a id='core-number'></a>Core Number
    Core number of the game should be 2 multiplications to symbolise a dualism everywhere, eg. there should be two ways to get into an area, two dialogue answers...
 
-3. ### <a id='moscow-analysis-of-mechanics'></a>MoSCoW analysis of mechanics:
+5. ### <a id='moscow-analysis-of-mechanics'></a>MoSCoW analysis of mechanics:
    - **Must have**:
      - High third-person perspective camera with a fixed pitch angle.
-     - Comperhensive dialogue trees with short dialogue lines.
+     - Comperhensive dialogue trees with short option lines to reduce translations costs.
      - Reputation system.
      - Detailed and dense world.
      - Auto save during specific story moments.
@@ -174,56 +187,60 @@ It will be somehow mix of systemic and directed approach: on the one hand, it wi
      - Random encounters.
      - All unique *Sir Thaddeus* characters.
 
-4. ### <a id='prizes'></a>Prizes
-   If a player will explore levlels enough, there will be a chance to find something that will enhance the historical lore and/or add additional dialogue.
+6. ### <a id='winning-and-losing'></a>Winning and Losing
+   It's inevitable that a player could get lost, however this particular scenario will be quite similar to the deep exploration. Quite similar scenario will appear when a player will explore levels enough, there will be the same chance to gain a prize.
 
-5. ### <a id='Enjoyable Failures'></a>Enjoyable Failures
-   It's inevitable that a player could get lost, however this particular scenario will be quite similar to the deep exploration - sometimes additional content will be found and sometimes clues how to get back and find a proper way.
+7. ### <a id='prizes'></a>Prizes
+   There will be a chance to find something that will enhance the historical lore and/or add additional dialogue.
 
-6. ### <a id='statistics-of-the-player'></a>Statistics of the Player
+8. ### <a id='statistics-of-the-player'></a>Statistics of the Player
    The game shouldn't be explicit with stats displaying them by numbers. Instead, it should use some graphs and mainly storytelling to show characters' parameters. Here comes the *show, don't tell* rule.
    
-   Optionally, there will be a reversed triangle that symbolises main character's attitude. Center will be the initial neutrals state. Left corner will symbolise Horeszko family, while right one - Soplicas. Collaboration with Russians will be placed at the bottom. As the protagonist is one of the Soplicas, player's attitude may be prejudiced, however to reconceal noblemen and thus succeed, neutrality will be necessary. Those attitudes will be the essence of the RPG loyality system, however it may judge player's morality so it should be considered deeply before optional implementation. This would trick player as working with Soplicas will be suggested at first sight, even if they won't be too familiar. Because of that, player probably will try to become neutral, and tho will probably achieve a relative success. 
+   Optionally, there will be a reversed triangle that symbolises main character's attitude. Center will be the initial neutrals state. Left corner will symbolise Horeszko family, while right one - Soplicas. Collaboration with Russians will be placed at the bottom. As the protagonist is one of the Soplicas, player's attitude may be prejudiced, however to reconceal noblemen and thus succeed, neutrality will be necessary. Those attitudes will be the essence of the RPG loyality system, however it may judge player's morality so it should be considered deeply before optional implementation. This would trick player as working with Soplicas will be suggested at first sight, even if they won't be too familiar. Because of that, player probably will try to become neutral, and tho will probably achieve a relative success.
 
 ## <a id='Story'></a>Story
 There is no distiction between and side jobs to simplify implementation. There will be nonlinear main quests only whose will have optional tasks sometimes to provide more diverse choices and consequences.
 
-- ### <a id='events-books'></a>Events/Books
-  1. Tadeusz arrives to Soplicowo, and Priest Robak later on.
-  2. Count Horeszko arrives to a Castle and stalks Zosia, Robak comes in-between.
-  3. Mushrooming with Soplicas.
-  4. Robak encourages noblemen in Jankiel's Inn to reconceal, then helps with a  Bear hunting.
-  5. Robak gifted with the Bear meat, serious argument in the Castle.
-  6. Priest arrives to Soplicowo once again, then to the Castle.
-  7. Robak tries to track Gerwazy to Dobrzyn (not included in the source).
-  8. Priest Robak arrives back to Soplicowo and makes a coming out to Judge.
-  9. Dobrzyn noblemen captive Soplicas, Robak goes to there and back with Maćko Dobrzyński is wounded nearly after in a Battle with Russians.
-  10. Public coming out and death of Robak, talks about emigration.
-  11. Public rehabilitation of Jacek Soplica in 1812 by Podkomorzy, during Napoleon's raid on Russia.
-  12. Junket with Polish generals in Sopliciwo, Tadeusz and Zosia wedding, a hope.
+1. ### <a id='timeline'></a>Timeline
 
-- ### <a id='quests-and-their-ids'></a>Quests and their IDs
-  0. Some kind of intuitive and immersive tutorial to provide an **intro**.
-  1. A little harder quest to create an **exposition** and speed-up **pacing**.
-  2. Harder quest with a **rising action**.
-  3. Final hard quest that becomes a **climax**.
-  4. A slowdown and player's Catharsis.
-  5. A short cutscene/gameplay event as a final conclusion. 
+2. ### <a id='events-books'></a>Events/Books
+   1. Tadeusz arrives to Soplicowo, and Priest Robak later on from a Chapel.
+   2. Count Horeszko arrives to a Castle and stalks Zosia, Robak comes in-between.
+   3. Mushrooming with Soplicas.
+   4. Robak encourages noblemen in Jankiel's Inn to reconceal, then helps with a  Bear hunting.
+   5. Robak gifted with the Bear meat, serious argument in the Castle.
+   6. Priest arrives to Soplicowo once again, then to the Count's Palace tracking Protazy.
+   7. Robak tries to track Gerwazy to Dobrzyn (not included in the source).
+   8. Priest Robak arrives back to Soplicowo and makes a coming out to Judge.
+   9. Dobrzyn noblemen captive Soplicas, Robak goes to there and back with Maćko Dobrzyński is wounded nearly after in a Battle with Russians.
+   10. Public coming out and death of Robak, talks about emigration.
+   11. Public rehabilitation of Jacek Soplica in 1812 by Podkomorzy, during Napoleon's raid on Russia.
+   12. Junket with Polish generals in Sopliciwo, Tadeusz and Zosia wedding, a hope.
 
-- ### <a id='endings-and-their-ids'></a>Endings and their IDs
-  0. The Blind One - Soplicas.
-  1. The Lawful Harsh - Horeszkos.
-  2. The Collaborant - Russians.
-  3. The Reconciler - active neutrality.
+3. ### <a id='quests'></a>Quests
+   1. Some kind of intuitive and immersive tutorial to provide an **intro**.
+   2. A little harder quest to create an **exposition** and speed-up **pacing**.
+   3. Harder quest with a **rising action**.
+   4. Final hard quest that becomes a **climax**.
+   5. A slowdown and player's Catharsis.
+   6. A short cutscene/gameplay event as a final conclusion. 
+
+4. ### <a id='endings'></a>Endings
+   - The Blind One - Soplicas.
+   - The Lawful Harsh - Horeszkos.
+   - The Collaborant - Russians.
+   - The Reconciler - active neutrality.
 
 ## <a id='sound'></a>Sound
-1. ### <a id='sfx'></a>Sound Effects
-   Simple free assets.
-2. ### <a id='music'></a>Music
+1. ### <a id='music'></a>Music
    Some tracks. Must be interactive and adaptive as games are interactive medium.
+2. ### <a id='effects'></a>Effects
+   Simple free assets.
 
 ## <a id='graphics'></a>Graphics
 3D low poly pixel art, where pixels are used only for details. Meshes and the textures' context are classicaly flat. Rich post-processing can be easily achieved due the Render Pipeline.
+1. ### <a id='art-direction'></a>Art Direction
+   Beautiful.
 
 ## <a id='accessibility'></a>Accessibility
 Each in-game feedback is expressed via at least two sensitive events, eg. dialogues use subtitles and narrator, enemies distraction - some character outline and a proper sound. Visual effects change it's shape, not color only to provide meaningful experience also for color-blind people. Most of the information is shown using mix of various visual and sound effects. Also the game should support at least custom mappings for: keyboard + mouse and Xbox, PlayStation pads. Game controls should be as much analogue as possible, eg. triggers on pads. The game should contain full colorblind-friendly only visuals optionally.
