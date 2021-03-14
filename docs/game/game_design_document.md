@@ -89,8 +89,8 @@ To solve those problems, player will have to explore levels those will be labiry
 
 1. ### <a id='key-mechanics'></a>Key Mechanics
    Relatively simple but greatly connecting narrative part with a world.
-   - NPCs are ghosts, explore labirynth as a priest to find a way to overhear them.
-   - Talk with them as player's son, Tadeusz, as a medium.
+   - Constantly jump between Robak's life and Jacek's interactive memories those dialogue choices will affect Priest's behaviour.
+   - Explore invisible level labirynths to find your path as the Priest or as Jacek.
 
 2. ### <a id='#core-low-level-loop'></a>Core (Low-level) Loop
    1. Walk.
@@ -99,10 +99,9 @@ To solve those problems, player will have to explore levels those will be labiry
 
 3. ### <a id='high-level-loop'></a>High-level Loop
    1. Let the level guide you via labirynth.
-   2. Approach a location with noblemen ghosts.
-   3. Try to find a way to get closer to prevent their dissaperance.
-   4. Talk with them via Tadeusz as a medium.
-   5. Unlock the dialogue location and go through it.
+   2. Enter one of the memories.
+   3. Choose your path via dialogues and exploration.
+   4. Enter next level as a Robak or Jacek and continue your internal journey.
 
 4. ### <a id='approach'></a>Approach
    It will be somehow mix of systemic and directed approach: on the one hand, it will allow player to use mechanics on their own, like various exploration possibilities and dialogue choices, on the other hand, the game won't have much mechanics (above two only) so the directed approach will be present too.
@@ -239,6 +238,7 @@ There is no distiction between and side jobs to simplify implementation. There w
    - The Lawful Harsh - Horeszkos.
    - The Collaborant - Russians.
    - The Reconciler - active neutrality.
+   - The Vagrant - live as Jacek before.
 
 ## <a id='sound'></a>Sound
 1. ### <a id='music'></a>Music
