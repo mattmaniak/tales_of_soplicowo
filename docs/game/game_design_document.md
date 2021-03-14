@@ -16,21 +16,24 @@ by Mateusz Maniak
 - [Development](#development)
   1. [Technologies](#technologies)  
   2. [Assets Budget Summary](#assets-budget-summary)  
+- [Gameplay](#gameplay)  
+  1. [Key Mechanics](#key-mechanics)
+  2. [Core (Low-level) Loop](#core-low-level-loop)
+  3. [High-level Loop](#high-level-loop)
+  4. [Core Number](#core-number)
+  5. [Approach](#approach)
+  6. [Modularity](#modularity)
+  7. [MoSCoW analysis of mechanics](#moscow-analysis-of-mechanics)
+  8. [Winning and Losing](#winning-and-losing)
+  9. [Prizes](#prizes)
+  10. [Statistics of the Player](#statistics-of-the-player)
+  11. [Progression](#progression)
 - [Characters](#characters)  
   1. [Player](#player)  
   2. [NPCs](#npcs)  
 - [World](#world)  
   1. [Map](#map)  
   2. [Levels](#levels)  
-- [Gameplay](#gameplay)  
-  1. [Key Mechanics](#key-mechanics)
-  2. [Core (Low-level) Loop](#core-low-level-loop)
-  3. [High-level Loop](#high-level-loop)
-  4. [Core Number](#core-number)
-  5. [MoSCoW analysis of mechanics](#moscow-analysis-of-mechanics)
-  6. [Winning and Losing](#winning-and-losing)
-  7. [Prizes](#prizes)
-  8. [Statistics of the Player](#statistics-of-the-player)
 - [Story](#Story)
   1. [Timeline](#timeline)  
   2. [Events/Books](#events-books)  
@@ -38,6 +41,7 @@ by Mateusz Maniak
   4. [Endings](#endings)  
 - [Graphics](#graphics)  
   1. [Art Direction](art-direction)  
+- [Controls](#controls)  
 - [Sound](#sound)  
   1. [Music](#music)  
   2. [Effects](#effects)  
@@ -77,6 +81,81 @@ by Mateusz Maniak
    The newest Python 3.8/3.9, Panda3D engine with it's RenderPipeline.
 2. ### <a id='assets-budget-summary'></a>Asset Budget Summary
    The less the better.
+
+## <a id='gameplay'></a>Gameplay
+The player acts as a priest whose goals is to go through the quests which are strictly related with Polish noble-class and *Sir Thaddeus* events. The goal is to persuade them to reunion. It will be done via helping them during various tasks from the Mickiewicz's book and deep talks about the Commonwealth. Optionally, the player will have to find and repair chapels.
+
+To solve those problems, player will have to explore levels those will be labirynths with various paths to go through. They will be somehow connected with a camera's fixed pitch and base on the problem of getting into some kind of relatively complex place.
+
+1. ### <a id='key-mechanics'></a>Key Mechanics
+   Relatively simple but greatly connecting narrative part with a world.
+   - NPCs are ghosts, explore labirynth as a priest to find a way to overhear them.
+   - Talk with them as player's son, Tadeusz, as a medium.
+
+2. ### <a id='#core-low-level-loop'></a>Core (Low-level) Loop
+   1. Walk.
+   2. Go Back.
+   3. Repeat.
+
+3. ### <a id='high-level-loop'></a>High-level Loop
+   1. Let the level guide you via labirynth.
+   2. Approach a location with noblemen ghosts.
+   3. Try to find a way to get closer to prevent their dissaperance.
+   4. Talk with them via Tadeusz as a medium.
+   5. Unlock the dialogue location and go through it.
+
+4. ### <a id='approach'></a>Approach
+   It will be somehow mix of systemic and directed approach: on the one hand, it will allow player to use mechanics on their own, like various exploration possibilities and dialogue choices, on the other hand, the game won't have much mechanics (above two only) so the directed approach will be present too.
+
+5. ### <a id='modularity'></a>Modularity
+   The gameplay will be a little modular only, as there will be labirynth and NPCs conversations as the cores. These mechanics modules will overlap.
+
+6. ### <a id='core-number'></a>Core Number
+   Core number of the game should be 2 multiplications to symbolise a dualism everywhere, eg. there should be two ways to get into an area, two dialogue answers...
+
+7. ### <a id='moscow-analysis-of-mechanics'></a>MoSCoW analysis of mechanics:
+   - **Must have**:
+     - High third-person perspective camera with a fixed pitch angle.
+     - Comperhensive dialogue trees with short option and truly story-changing lines to reduce translations costs.
+     - Mandatory but various time limit for dialogues with a possibility to skip an answer in order to **favour human connection**.
+     - Reputation system.
+     - Detailed and dense world.
+     - Auto save during specific story moments.
+     - *Press any button to continue* after loading screens.
+   - **Sould have**:
+     - Day-night cycle that changes gameplay and mostly negative night consequences.
+     - In-door visibility - transparent portal on player or buildings half-transparency.
+     - Basic in-game menu with: map, reputation graph, skills and current quest description.
+     - Symbolic hints: icons, GIFs, sounds to represent settings differences and visualise invisible.
+     - Compass.
+   - **Could have**:
+     - Basic economy for repair stuff trade.
+     - Time skip only near repaired chapels.
+     - Chapels repair and manual save possibility near them.
+     - Courier's backpack when carrying repair tools.
+   - **Won't have**:
+     - Shoulder third-person perspective camera.
+     - Minimap.
+     - Combat.
+     - Stealth.
+     - Random encounters.
+     - All unique *Sir Thaddeus* characters.
+
+8. ### <a id='winning-and-losing'></a>Winning and Losing
+   It's inevitable that a player could get lost, however this particular scenario will be quite similar to the deep exploration. Quite similar scenario will appear when a player will explore levels enough, there will be the same chance to gain a prize.
+
+9. ### <a id='prizes'></a>Prizes
+   There will be a chance to find something that will enhance the historical lore and/or add additional dialogue.
+
+10. ### <a id='statistics-of-the-player'></a>Statistics of the Player
+    The game shouldn't be explicit with stats displaying them by numbers. Instead, it should use some graphs and mainly storytelling to show characters' parameters. Here comes the *show, don't tell* rule.
+   
+    Optionally, there will be a reversed triangle that symbolises main character's attitude. Center will be the initial neutrals state. Left corner will symbolise Horeszko family, while right one - Soplicas. Collaboration with Russians will be placed at the bottom. As the protagonist is one of the Soplicas, player's attitude may be prejudiced, however to reconceal noblemen and thus succeed, neutrality will be necessary. Those attitudes will be the essence of the RPG loyality system, however it may judge player's morality so it should be considered deeply before optional implementation. This would trick player as working with Soplicas will be suggested at first sight, even if they won't be too familiar. Because of that, player probably will try to become neutral, and tho will probably achieve a relative success.
+
+11. ### <a id='progression'></a>Progression 
+    Note that each further labirynth and dialogue should be harder to provide a customizable progression system with a progressive difficulty.
+
+    **Game's content and progression chart here.**
 
 ## <a id='characters'></a>Characters
 There should be 12 characters, excluding the players. Each of them should be connected with exactly of the 12 Jungian archetypes. One of them will by same as the player's archetype as opposition.
@@ -128,76 +207,6 @@ Closed but with various options to achieve a destination. Internal legacy protot
    12. Dobrzyn.
    13. Soplicowo - ending point.
 
-## <a id='gameplay'></a>Gameplay
-The player acts as a priest whose goals is to go through the quests which are strictly related with Polish noble-class and *Sir Thaddeus* events. The goal is to persuade them to reunion. It will be done via helping them during various tasks from the Mickiewicz's book and deep talks about the Commonwealth. Optionally, the player will have to find and repair chapels.
-
-To solve those problems, player will have to explore levels those will be labirynths with various paths to go through. They will be somehow connected with a camera's fixed pitch and base on the problem of getting into some kind of relatively complex place.
-
-Note that each further labirynth and dialogue should be harder to provide a customizable progression system with a progressive difficulty.
-
-The gameplay will be a little modular only, as there will be labirynth and NPCs conversations as the cores. These mechanics modules will overlap.
-
-Both mechanics will be expressive for the player by their nonlinearity, so the player will be able to choose own way and behave in-game as he/she intends.
-
-It will be somehow mix of systemic and directed approach: on the one hand, it will allow player to use mechanics on their own, like various exploration possibilities and dialogue choices, on the other hand, the game won't have much mechanics (above two only) so the directed approach will be present too.
-
-1. ### <a id='key-mechanics'></a>Key Mechanics
-   - NPCs are ghosts, explore labirynth to find a way to overhear them.
-   - Talk with them using your son, Tadeusz, as a medium.
-
-2. ### <a id='#core-low-level-loop'></a>Core (Low-level) Loop
-   1. Walk.
-   2. Go Back.
-   3. Repeat.
-
-3. ### <a id='high-level-loop'></a>High-level Loop
-   1. Enter and explore level a little.
-   2. Deep talk with quest owner who explains the problem. 
-   3. Go to a specified place to find a solution.
-   4. Find a path through a labirynth and optionally fix chapel.
-   5. Short talk with NPC that thanks for the help and informs about a next job seamlessly.
-
-4. ### <a id='core-number'></a>Core Number
-   Core number of the game should be 2 multiplications to symbolise a dualism everywhere, eg. there should be two ways to get into an area, two dialogue answers...
-
-5. ### <a id='moscow-analysis-of-mechanics'></a>MoSCoW analysis of mechanics:
-   - **Must have**:
-     - High third-person perspective camera with a fixed pitch angle.
-     - Comperhensive dialogue trees with short option lines to reduce translations costs.
-     - Reputation system.
-     - Detailed and dense world.
-     - Auto save during specific story moments.
-     - *Press any button to continue* after loading screens.
-   - **Sould have**:
-     - Day-night cycle that changes gameplay and mostly negative night consequences.
-     - In-door visibility - transparent portal on player or buildings half-transparency.
-     - Basic in-game menu with: map, reputation graph, skills and current quest description.
-     - Symbolic hints: icons, GIFs, sounds to represent settings differences and visualise invisible.
-     - Compass.
-   - **Could have**:
-     - Basic economy for repair stuff trade.
-     - Time skip only near repaired chapels.
-     - Chapels repair and manual save possibility near them.
-     - Courier's backpack when carrying repair tools.
-   - **Won't have**:
-     - Shoulder third-person perspective camera.
-     - Minimap.
-     - Combat.
-     - Stealth.
-     - Random encounters.
-     - All unique *Sir Thaddeus* characters.
-
-6. ### <a id='winning-and-losing'></a>Winning and Losing
-   It's inevitable that a player could get lost, however this particular scenario will be quite similar to the deep exploration. Quite similar scenario will appear when a player will explore levels enough, there will be the same chance to gain a prize.
-
-7. ### <a id='prizes'></a>Prizes
-   There will be a chance to find something that will enhance the historical lore and/or add additional dialogue.
-
-8. ### <a id='statistics-of-the-player'></a>Statistics of the Player
-   The game shouldn't be explicit with stats displaying them by numbers. Instead, it should use some graphs and mainly storytelling to show characters' parameters. Here comes the *show, don't tell* rule.
-   
-   Optionally, there will be a reversed triangle that symbolises main character's attitude. Center will be the initial neutrals state. Left corner will symbolise Horeszko family, while right one - Soplicas. Collaboration with Russians will be placed at the bottom. As the protagonist is one of the Soplicas, player's attitude may be prejudiced, however to reconceal noblemen and thus succeed, neutrality will be necessary. Those attitudes will be the essence of the RPG loyality system, however it may judge player's morality so it should be considered deeply before optional implementation. This would trick player as working with Soplicas will be suggested at first sight, even if they won't be too familiar. Because of that, player probably will try to become neutral, and tho will probably achieve a relative success.
-
 ## <a id='Story'></a>Story
 There is no distiction between and side jobs to simplify implementation. There will be nonlinear main quests only whose will have optional tasks sometimes to provide more diverse choices and consequences.
 
@@ -241,6 +250,9 @@ There is no distiction between and side jobs to simplify implementation. There w
 3D low poly pixel art, where pixels are used only for details. Meshes and the textures' context are classicaly flat. Rich post-processing can be easily achieved due the Render Pipeline.
 1. ### <a id='art-direction'></a>Art Direction
    Beautiful.
+
+## <a id='controls'></a>Controls
+Easy.
 
 ## <a id='accessibility'></a>Accessibility
 Each in-game feedback is expressed via at least two sensitive events, eg. dialogues use subtitles and narrator, enemies distraction - some character outline and a proper sound. Visual effects change it's shape, not color only to provide meaningful experience also for color-blind people. Most of the information is shown using mix of various visual and sound effects. Also the game should support at least custom mappings for: keyboard + mouse and Xbox, PlayStation pads. Game controls should be as much analogue as possible, eg. triggers on pads. The game should contain full colorblind-friendly only visuals optionally.
