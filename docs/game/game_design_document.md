@@ -88,9 +88,10 @@ The player acts as a priest whose goals is to go through the quests which are st
 To solve those problems, player will have to explore levels those will be labirynths with various paths to go through. They will be somehow connected with a camera's fixed pitch and base on the problem of getting into some kind of relatively complex place.
 
 1. ### <a id='key-mechanics'></a>Key Mechanics
-   Relatively simple but greatly connecting narrative part with a world.
    - Constantly jump between Robak's life and Jacek's interactive memories those dialogue choices will affect Priest's behaviour.
    - Explore invisible level labirynths to find your path as the Priest or as Jacek.
+
+   Both Jacek's and Robak's world will be dualistic, however there will be only one predominant style for each. Jacek's memories will include dark fantasy elements. Also there will be subtle positive stuff as he was a young vagrant. Robak's real world will be wonderfully colorful and inspired by high fantasy. On the other side, it will be still an occupied motherland.
 
 2. ### <a id='#core-low-level-loop'></a>Core (Low-level) Loop
    1. Walk.
