@@ -31,9 +31,10 @@ by Mateusz Maniak
 - [Characters](#characters)  
   1. [Player](#player)  
   2. [NPCs](#npcs)  
-- [World](#world)  
-  1. [Map](#map)  
-  2. [Levels](#levels)  
+- [World](#world)
+  1. [Environment](#environment)  
+  2. [Map](#map)  
+  3. [Levels](#levels)  
 - [Story](#Story)
   1. [Timeline](#timeline)  
   2. [Events/Books](#events-books)  
@@ -189,10 +190,13 @@ There should be 12 characters, excluding the players. Each of them should be con
 ## <a id='world'></a>World
 Closed but with various options to achieve a destination. Internal legacy prototype `mapa_w_skali_v2.jpg` is a good initial reference for a level design. It should be full of symbols to communicate effectively.
 
-1. ### <a id='map'></a>Map
+1. ### <a id='environment'></a>Environment
+   ...should not only perform as a static world component, but also as a dynamic narrative tool. Using various intense and distinctive weather types will according to the present events willprovide additional background and experence.
+
+2. ### <a id='map'></a>Map
    Contains some levels on the single map. It will be important storytelling and reputation system component too - some places will be unavailable, while other will be available according to the player choices. This will provide gameplay nonlinearity. Each level will be symbolic and will be uniqely different.
 
-2. ### <a id='levels'></a>Levels
+3. ### <a id='levels'></a>Levels
    1. Chapel.
    2. Soplicowo - starting point, hub world, maybe.
    3. Horeszko's Castle.
