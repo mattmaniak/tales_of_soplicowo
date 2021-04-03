@@ -215,6 +215,7 @@ Closed but with various options to achieve a destination. Internal legacy protot
 There is no distiction between and side jobs to simplify implementation. There will be nonlinear main quests only whose will have optional tasks sometimes to provide more diverse choices and consequences.
 
 1. ### <a id='timeline'></a>Timeline
+   A distinctive element will be that the game will use the Monomyth in the case of Priest Robak and an inverted Monomyth in Jackes's story. Initially, the player will start from the same moment in 1811, and then will go through the Robak's events traditionally and Jacek's events from this point to the past. Robak's past world will be introduced softly by his mentions about memories, which will be revealed step-by-step.
 
 2. ### <a id='events-books'></a>Events/Books
    1. Tadeusz arrives to Soplicowo, and Priest Robak later on from a Chapel.
