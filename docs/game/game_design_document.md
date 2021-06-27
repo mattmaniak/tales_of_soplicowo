@@ -13,6 +13,7 @@ by Mateusz Maniak
   6. [Plot](#plot)  
   7. [Inspirations](#inspirations)  
   8. [Unique Selling Point](#unique-selling-point)  
+  9. [Sources](#sources)
 - [Development](#development)
   1. [Technologies](#technologies)  
   2. [Assets Budget Summary](#assets-budget-summary)  
@@ -47,6 +48,7 @@ by Mateusz Maniak
   1. [Music](#music)  
   2. [Effects](#effects)  
 - [Accessibility](#accessibility)  
+- [Miscellaneous](#miscellaneous)  
 
 ## <a id='description'></a>Description
 1. ### <a id='motto'></a>Motto
@@ -76,6 +78,11 @@ by Mateusz Maniak
    - *Disco Elysium* - engaging dialogue trees instead as a combat.
    - *Hellblade: Senua's Sacrifice* - environmental puzzles and personal narration.
    - *Horizon Zero Dawn* - specific save points only.
+
+8. ### <a id='unique-selling-point'></a>Unique Selling Point
+
+9. ### <a id='sources'></a>Sources
+   - https://leonardkress.com/Pan%20Tadeusz.pdf
 
 ## <a id='development'></a>Development
 1. ### <a id='technologies'></a>Technologies
@@ -194,7 +201,7 @@ Closed but with various options to achieve a destination. Internal legacy protot
    ...should not only perform as a static world component, but also as a dynamic narrative tool. Using various intense and distinctive weather types will according to the present events willprovide additional background and experence.
 
 2. ### <a id='map'></a>Map
-   Contains some levels on the single map. It will be important storytelling and reputation system component too - some places will be unavailable, while other will be available according to the player choices. This will provide gameplay nonlinearity. Each level will be symbolic and will be uniqely different.
+   Contains some levels on the single map. It will be important storytelling and reputation system component too - some places will be unavailable, while other will be available according to the player choices. This will provide gameplay nonlinearity. Each level will be symbolic and will be uniqely different. Walking speed and placement of objects should provide a possibility to reach every building or place in two seconds.
 
 3. ### <a id='levels'></a>Levels
    1. Chapel.
@@ -262,3 +269,13 @@ Easy.
 
 ## <a id='accessibility'></a>Accessibility
 Each in-game feedback is expressed via at least two sensitive events, eg. dialogues use subtitles and narrator, enemies distraction - some character outline and a proper sound. Visual effects change it's shape, not color only to provide meaningful experience also for color-blind people. Most of the information is shown using mix of various visual and sound effects. Also the game should support at least custom mappings for: keyboard + mouse and Xbox, PlayStation pads. Game controls should be as much analogue as possible, eg. triggers on pads. The game should contain full colorblind-friendly only visuals optionally.
+
+Context subtitles [jazz music in backround].
+
+## <a id='miscellaneous'></a>Miscellaneous
+- Easter eggs?
+- Some kind of metagame?
+- Negative emotions per contrast?
+- Gameplay aided by Jacek/Robak.
+- The game should contain verisimilitude.
+- Convert this doc to a future tense!
