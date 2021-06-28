@@ -279,3 +279,4 @@ Context subtitles [jazz music in backround].
 - Gameplay aided by Jacek/Robak.
 - The game should contain verisimilitude.
 - Convert this doc to a future tense!
+- Monomyth or not: https://www.steveseager.com/heros-journey-four-innovative-narrative-models-digital-story-design/
