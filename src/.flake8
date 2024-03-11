@@ -1,0 +1,4 @@
+[flake8]
+
+# F821 - undefined name "base" (mostly).
+ignore = F821

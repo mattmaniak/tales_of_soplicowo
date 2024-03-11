@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# IDEs
+.idea
+.vs
+.vscode
+
+# Artifacts
+build
+
+# Pythom
+.venv
+__pycache__
