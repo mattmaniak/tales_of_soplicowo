@@ -1,0 +1,4 @@
+[submodule "Render Pipeline"]
+	path = vendor/render_pipeline
+	url = https://github.com/tobspr/RenderPipeline
+	branch = master

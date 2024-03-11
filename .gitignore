@@ -1,14 +1,14 @@
-# macOS
-.DS_Store
+# Artifacts
+[Bb]uild
 
 # IDEs
 .idea
 .vs
 .vscode
 
-# Artifacts
-build
+# macOS
+.DS_Store
 
-# Pythom
+# Python
 .venv
 __pycache__

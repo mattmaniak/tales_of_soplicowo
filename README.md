@@ -10,10 +10,10 @@ camera with a customizable relative position. The Witcher 1's styled. Contains
 also a player that can walk or run on a terrain.
 
 ## Requirements
-- At least **Python 3.12.2** (https://www.python.org/downloads/release/python-367/)
+- At least **Python 3.12**
 The version used for the development. Newer versions will work. Older versions
 may work but I don't guarantee anything.
-- At least **Panda3D 1.10.14** (https://www.panda3d.org/download/sdk-1-10-3/)
+- At least **Panda3D 1.10**
 As above, version used for the development.
 
 ## Usage
@@ -43,6 +43,8 @@ by hitting the Shift key. Escape button will exit the app.
 (https://www.python.org/dev/peps/pep-0008/)
 - **PEP 257 -- Docstring Conventions**
 (https://www.python.org/dev/peps/pep-0257/)
+- **Semantic Versioning**
+(https://semver.org)
 
 ## Optional tools
 - **the modular source code checker: pep8, pyflakes and co**
