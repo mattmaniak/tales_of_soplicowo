@@ -41,6 +41,13 @@ Then move and look around using the WSAD keys and a mouse. Toggle run or walk by
 
 - [Panda3D tutorial](https://github.com/fireclawthefox/panda3d-tutorial).
 
+### [AtiByte's](https://www.youtube.com/@atibyte) YouTube tutorial playlists for Panda3D
+
+- [Panda3D GLSL shaders](https://www.youtube.com/playlist?list=PL1P11yPQAo7p7rwLfMYvcxdzRBLwue7O2).
+- [Panda3D game prototypes](https://www.youtube.com/playlist?list=PL1P11yPQAo7rMvtIxF1kedMQOacdXxr-e).
+- [Panda3D model loading](https://www.youtube.com/playlist?list=PL1P11yPQAo7r198TGKomijJpwZGWO3EUg).
+- [Panda3D tutorials](https://www.youtube.com/playlist?list=PL1P11yPQAo7oEAGuPcqMnn9ZWHLWP3-Lc).
+
 ## Coding rules
 
 - [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/).

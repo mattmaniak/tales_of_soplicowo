@@ -3,6 +3,7 @@
 Adventure RPG video game
 
 ## Game Design Document
+
 by mattmaniak
 
 ## Table of Contents
@@ -94,13 +95,13 @@ by mattmaniak
 
 9. ### <a id='sources'></a>Sources
 
-   - https://leonardkress.com/Pan%20Tadeusz.pdf
+   - [PDF version of *Pan Tadeusz* uploaded by Leonard Kress](https://leonardkress.com/Pan%20Tadeusz.pdf).
 
 ## <a id='development'></a>Development
 
 1. ### <a id='technologies'></a>Technologies
 
-   The newest Python 3.8/3.9, Panda3D engine with it's RenderPipeline.
+   The newest Python 3.12, Panda3D engine with it's Render Pipeline.
 
 2. ### <a id='assets-budget-summary'></a>Asset Budget Summary
 
@@ -184,7 +185,7 @@ To solve those problems, player will have to explore levels those will be labiry
 10. ### <a id='statistics-of-the-player'></a>Statistics of the Player
 
     The game shouldn't be explicit with stats displaying them by numbers. Instead, it should use some graphs and mainly storytelling to show characters' parameters. Here comes the *show, don't tell* rule.
-   
+
     Optionally, there will be a reversed triangle that symbolises main character's attitude. Center will be the initial neutrals state. Left corner will symbolise Horeszko family, while right one - Soplicas. Collaboration with Russians will be placed at the bottom. As the protagonist is one of the Soplicas, player's attitude may be prejudiced, however to reconceal noblemen and thus succeed, neutrality will be necessary. Those attitudes will be the essence of the RPG loyality system, however it may judge player's morality so it should be considered deeply before optional implementation. This would trick player as working with Soplicas will be suggested at first sight, even if they won't be too familiar. Because of that, player probably will try to become neutral, and tho will probably achieve a relative success.
 
 11. ### <a id='progression'></a>Progression 
