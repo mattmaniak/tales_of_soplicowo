@@ -100,6 +100,7 @@ def setup_mouse():
     (RPG-games-like).
     """
 
+    # https://docs.panda3d.org/1.10/python/programming/hardware-support/mouse-support#relative-mouse-mode
     new_mouse_settings = WindowProperties()
     base.disableMouse()  # Disable default mouse steering.
     new_mouse_settings.setCursorHidden(True)
