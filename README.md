@@ -34,7 +34,8 @@ python3 -m pip install -r pip_packages.txt
 
 ```shell
 cd src &&
-./main.py
+./main.py &&
+cd ..
 ```
 
 Then move and look around using the WSAD keys and a mouse. Toggle run or walk
