@@ -9,7 +9,7 @@ try:
     from panda3d.core import CollisionTraverser
     from panda3d.core import ModelRoot
 except ModuleNotFoundError:
-    sys.stderr.write("Panda3d not found.\n")
+    sys.stderr.write("Panda3D not found. Check your venv configuration.\n")
     exit()
 
 

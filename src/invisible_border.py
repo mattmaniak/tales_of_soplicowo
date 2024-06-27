@@ -5,7 +5,7 @@ import sys
 try:
     from direct.actor.Actor import Actor
 except ModuleNotFoundError:
-    sys.stderr.write("Panda3d not found.\n")
+    sys.stderr.write("Panda3D not found. Check your venv configuration.\n")
     exit()
 
 
