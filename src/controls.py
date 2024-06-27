@@ -73,7 +73,7 @@ def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float):
     # Push the mouse pointer maximally to the left.
     if -mouse_pos['x'] * MOUSE_SENSITIVITY_DEG < 0:
         mouse_x_onscreen_px = (window.getXSize() / 2) \
-            - (window.getXSize() / 2 * 360 / MOUSE_SENSITIVITY_DEG)
+                - (window.getXSize() / 2 * 360 / MOUSE_SENSITIVITY_DEG)
 
     # Push the pointer to the default pos (center).
     elif -mouse_pos['x'] * MOUSE_SENSITIVITY_DEG > 360:
@@ -92,8 +92,12 @@ def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float):
             - (window.getYSize() / 2 * max_pitch_deg
                / MOUSE_SENSITIVITY_DEG)
 
-    base.win.movePointer(DEFAULT_POINTER_ID, int(mouse_x_onscreen_px),
-                         int(mouse_y_onscreen_px))
+    # On macOS a mouse cursor is force moved outside the app window due to
+    # this position limiter. A workaround is to not call it and not alter the
+    # mouse position.
+    if sys.platform != "darwin":
+        base.win.movePointer(DEFAULT_POINTER_ID, int(mouse_x_onscreen_px),
+                             int(mouse_y_onscreen_px))
 
 
 def setup_mouse():
