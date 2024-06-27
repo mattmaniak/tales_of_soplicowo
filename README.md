@@ -29,13 +29,19 @@ python3 -m pip install -r pip_packages.txt
 
 ### Run
 
+Enter the source code directory.
+
 ```shell
-cd src &&
-./main.py &&
-cd ..
+cd src
 ```
 
-Then move and look around using the WSAD keys and a mouse. Toggle run or walk by hitting the Shift key. Escape button will exit the app.
+And then run the starting file.
+
+```shell
+./main.py
+```
+
+Move the character and look around using the WSAD keys and a mouse. Toggle run or walk by hitting the Shift key. Escape button will exit the app.
 
 ## Useful resources
 
