@@ -2,10 +2,12 @@
 
 import sys
 
+import errors
+
 try:
     from panda3d.core import WindowProperties
 except ModuleNotFoundError:
-    sys.stderr.write("Panda3D not found. Check your venv configuration.\n")
+    sys.stderr.write(errors.PANDA3D_MISSING_ERROR)
     exit()
 
 

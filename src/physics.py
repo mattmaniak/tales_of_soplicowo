@@ -1,5 +1,7 @@
 import sys
 
+import errors
+
 try:
     from direct.actor.Actor import Actor
     from panda3d.core import CollisionHandlerQueue
@@ -9,7 +11,7 @@ try:
     from panda3d.core import CollisionTraverser
     from panda3d.core import ModelRoot
 except ModuleNotFoundError:
-    sys.stderr.write("Panda3D not found. Check your venv configuration.\n")
+    sys.stderr.write(errors.PANDA3D_MISSING_ERROR)
     exit()
 
 
