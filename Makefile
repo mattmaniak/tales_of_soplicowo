@@ -5,12 +5,9 @@ PYTHON = python3
 
 .PHONY: venv
 venv:
-	# https://stackoverflow.com/a/24736236
-	( \
-		$(PYTHON) -m venv $(VENV_DIR) && \
-		source $(ACTIVATE_VENV) && \
-		$(PYTHON) -m pip install -r $(PIP_PACKAGES_FILE) \
-	)
+	$(PYTHON) -m venv $(VENV_DIR) && \
+	source $(ACTIVATE_VENV) && \
+	$(PYTHON) -m pip install -r $(PIP_PACKAGES_FILE)
 
 .PHONY: clean
 clean:
