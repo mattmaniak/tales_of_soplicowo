@@ -1,4 +1,4 @@
-PIP_PACKAGES_FILE = pip_packages.txt
+PYTHON_DEPS_FILE = python_deps.txt
 VENV_DIR = .venv
 ACTIVATE_VENV = $(VENV_DIR)/bin/activate
 PYTHON = python3
@@ -7,7 +7,7 @@ PYTHON = python3
 venv:
 	$(PYTHON) -m venv $(VENV_DIR) && \
 	source $(ACTIVATE_VENV) && \
-	$(PYTHON) -m pip install -r $(PIP_PACKAGES_FILE)
+	$(PYTHON) -m pip install -r $(PYTHON_DEPS_FILE)
 
 .PHONY: clean
 clean:

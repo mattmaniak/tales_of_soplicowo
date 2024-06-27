@@ -24,7 +24,7 @@ Use [venv](https://docs.python.org/3/library/venv.html) to enter a virtual envir
 ```shell
 python3 -m venv .venv &&
 source .venv/bin/activate &&
-python3 -m pip install -r pip_packages.txt
+python3 -m pip install -r python_deps.txt
 ```
 
 ### Run
