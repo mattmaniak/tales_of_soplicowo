@@ -45,9 +45,9 @@ class Player(Actor):
         self.__timer_ms = 0.0  # Finite-state machine timer.
 
         try:
-            Actor.__init__(self, "../assets/panda3d/samples/roaming-ralph/models/ralph",
-                           {"walk": "../assets/panda3d/samples/roaming-ralph/models/ralph-walk",
-                            "run": "../assets/panda3d/samples/roaming-ralph/models/ralph-run"})
+            Actor.__init__(self, "../assets/panda3d/samples/roaming-ralph/models/ralph", # noqa E501
+                           {"walk": "../assets/panda3d/samples/roaming-ralph/models/ralph-walk", # noqa E501
+                            "run": "../assets/panda3d/samples/roaming-ralph/models/ralph-run"}) # noqa E501
         except OSError:
             sys.stderr.write("Unable to load the player assets.\n")
             raise

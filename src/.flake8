@@ -1,4 +1,5 @@
 [flake8]
 
-# F821 - undefined name "base" (mostly).
-ignore = F821
+# F821 undefined name 'base'
+# W503 line break before binary operator
+ignore = F821, W503
