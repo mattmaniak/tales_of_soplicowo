@@ -118,7 +118,8 @@ class TPPCamera:
         # this position limiter. A workaround is to not call it and not alter
         # the mouse position.
         if sys.platform != "darwin":
-            controls.limit_mouse_pos(self.__MIN_PITCH_DEG, self.__max_pitch_deg)
+            controls.limit_mouse_pos(self.__MIN_PITCH_DEG,
+                                     self.__max_pitch_deg)
 
         if controls.mouse_pos['y'] * controls.MOUSE_SENSITIVITY_DEG \
                 < self.__MIN_PITCH_DEG:

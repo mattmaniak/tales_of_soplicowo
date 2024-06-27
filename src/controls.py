@@ -64,11 +64,11 @@ def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float):
     window = base.win.getProperties()
 
     # Convert P3D coorinates to screen pixels.
-    mouse_x_onscreen_px = (window.getXSize() / 2) + ((window.getXSize() / 2)
-                                                     * mouse_pos['x'])
+    mouse_x_onscreen_px = \
+        (window.getXSize() / 2) + ((window.getXSize() / 2) * mouse_pos['x'])
 
-    mouse_y_onscreen_px = (window.getYSize() / 2) - ((window.getYSize() / 2)
-                                                     * mouse_pos['y'])
+    mouse_y_onscreen_px = \
+        (window.getYSize() / 2) - ((window.getYSize() / 2) * mouse_pos['y'])
 
     # Push the mouse pointer maximally to the left.
     if -mouse_pos['x'] * MOUSE_SENSITIVITY_DEG < 0:
@@ -82,15 +82,15 @@ def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float):
     # Mouse is too low.
     if mouse_pos['y'] * MOUSE_SENSITIVITY_DEG < min_pitch_deg:
         mouse_y_onscreen_px = (window.getYSize() / 2) \
-            - (window.getYSize() / 2 * min_pitch_deg /
-               MOUSE_SENSITIVITY_DEG)
+            - (window.getYSize() / 2 * min_pitch_deg
+               / MOUSE_SENSITIVITY_DEG)
 
     # Mouse is too high.
     elif mouse_pos['y'] * MOUSE_SENSITIVITY_DEG > max_pitch_deg:
-        # Konwersja pandowych koordynatów myszy na piksele na ekranie.
+        # Convert Panda3D mouse coordinates to pixels.
         mouse_y_onscreen_px = (window.getYSize() / 2) \
-            - (window.getYSize() / 2 * max_pitch_deg /
-               MOUSE_SENSITIVITY_DEG)
+            - (window.getYSize() / 2 * max_pitch_deg
+               / MOUSE_SENSITIVITY_DEG)
 
     base.win.movePointer(DEFAULT_POINTER_ID, int(mouse_x_onscreen_px),
                          int(mouse_y_onscreen_px))
