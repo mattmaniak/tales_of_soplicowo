@@ -29,17 +29,10 @@ python3 -m pip install -r python_deps.txt
 
 ### Run
 
-Enter the source code directory.
-
 ```shell
-cd src
+cd src/main.py
 ```
 
-And then run the starting file.
-
-```shell
-./main.py
-```
 
 Move the character and look around using the WSAD keys and a mouse. Toggle run or walk by hitting the Shift key. Escape button will exit the app.
 
