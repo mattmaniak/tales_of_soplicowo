@@ -1,6 +1,6 @@
 # Tales of Soplicowo
 
-Use the third-person camera with the Panda3D and the "Tales of Soplicowo" game wannabe project.
+Use the third-person camera with the Panda3D.
 
 ![image](main_screenshot.png "Tales of Soplicowo main screenshot")
 
