@@ -33,3 +33,5 @@ def get_angle_quarter(angle_deg: float) -> int:
         return 3
     if 270 <= angle_deg % 360 < 360:
         return 4
+    else:
+        return 0

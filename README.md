@@ -19,7 +19,7 @@ A more sophisticated RoamingRalphDemo. Extracted from the discontinued Kultakoul
 
 ### Prepare
 
-Use [venv](https://docs.python.org/3/library/venv.html) to enter a virtual environment.
+Use [venv](https://docs.python.org/3/library/venv.html) to enter a virtual environment. You can also use [pipx](https://pipx.pypa.io/latest/) to install them from the `python_deps.txt` file manually.
 
 ```shell
 python3 -m venv .venv &&
