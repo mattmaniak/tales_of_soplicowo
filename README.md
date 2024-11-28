@@ -57,3 +57,4 @@ Move the character and look around using the WSAD keys and a mouse. Toggle run o
 ## Optional tools
 
 - [flake8](https://pypi.org/project/flake8/) for static code analysis.
+- [mypy](https://www.mypy-lang.org/) for enforcing static typing.
