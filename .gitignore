@@ -11,5 +11,6 @@
 __MACOSX
 
 # Python
+.mypy_cache
 .venv
 __pycache__
