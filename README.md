@@ -54,6 +54,7 @@ Move the character and look around using the WSAD keys and a mouse. Toggle run o
 
 ## Coding rules
 
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 - [PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/).
 - [PEP 20 -- The Zen of Python](https://www.python.org/dev/peps/pep-0020/).
 - [PEP 257 -- Docstring Conventions](https://www.python.org/dev/peps/pep-0257/).
