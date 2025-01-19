@@ -28,7 +28,7 @@ class States(Enum):
 class Player(Actor):
     """Same as in the file's header docstring."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Load and set the player attribiutes."""
 
         self.RELATIVE_Z_OFFSET_M = 0.0
@@ -55,7 +55,7 @@ class Player(Actor):
         self.setH(self.__DEFAULT_RELATIVE_YAW_DEG)
         self.setScale(0.4)
 
-    def control(self, tpp_camera: TPPCamera):
+    def control(self, tpp_camera: TPPCamera) -> None:
         """Change player pos using the "controls" module."""
 
         invisible_border.limit_actor_movable_area(self)
@@ -91,14 +91,14 @@ class Player(Actor):
 
         tpp_camera.change_position(Vec3(0, 0, self.delta_vector_m.getZ()))
 
-    def __follow_camera(self):
+    def __follow_camera(self) -> None:
         """Rotate the player's back to the camera."""
 
         self.setH(self.__DEFAULT_RELATIVE_YAW_DEG
                   - (controls.mouse_pos['x']
                      * controls.MOUSE_SENSITIVITY_DEG))
 
-    def __move_in_x_axis(self, tpp_camera: TPPCamera):
+    def __move_in_x_axis(self, tpp_camera: TPPCamera) -> None:
         """X-axis movement handling."""
 
         camera_yaw_deg = base.camera.getH()
@@ -125,7 +125,7 @@ class Player(Actor):
                                 self.delta_vector_m.getZ())
         self.__set_position(tpp_camera)
 
-    def __move_in_y_axis(self, tpp_camera: TPPCamera):
+    def __move_in_y_axis(self, tpp_camera: TPPCamera) -> None:
         """Y-axis movement handling."""
 
         camera_yaw_deg = base.camera.getH()
@@ -161,7 +161,7 @@ class Player(Actor):
 
         self.__set_position(tpp_camera)
 
-    def __rotate_relatively_to_camera(self):
+    def __rotate_relatively_to_camera(self) -> None:
         """Mainly relative diagonal to camera movement handling."""
 
         sqrt_of_2 = math.sqrt(2)
@@ -194,7 +194,7 @@ class Player(Actor):
         elif controls.pressed_keys[controls.Keymap.Player.go_backward]:
             self.setH(player_yaw + 180)
 
-    def __set_delta_per_frame_m(self):
+    def __set_delta_per_frame_m(self) -> None:
         """Set delta speed and optionally normalize it."""
 
         if self.__running_is_toggled:
@@ -203,7 +203,7 @@ class Player(Actor):
             self.__delta_per_frame_m = self.__SPEED_M_PER_S["walk"]
         self.__delta_per_frame_m *= globalClock.getDt()
 
-    def __set_position(self, tpp_camera: TPPCamera):
+    def __set_position(self, tpp_camera: TPPCamera) -> None:
         """Adjust the player position and normalize the main vector."""
 
         try:
@@ -228,7 +228,7 @@ class Player(Actor):
         tpp_camera.change_position(Vec3(self.delta_vector_m.getX(),
                                         self.delta_vector_m.getY(), 0.0))
 
-    def __set_state(self):
+    def __set_state(self) -> None:
         """Set the animations of walking or running or disable it.
 
         Simple finite-state machine.

@@ -4,7 +4,7 @@ from player import Player
 class World:
     """Just player and terrain inside."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Load an environment."""
 
         try:
@@ -16,13 +16,13 @@ class World:
 
         self.__render()
 
-    def __del__(self):
+    def __del__(self) -> None:
         """Clean the environment."""
 
         del self.player
         del self.terrain
 
-    def __render(self):
+    def __render(self) -> None:
         """Show the world."""
 
         self.terrain.reparentTo(base.render)

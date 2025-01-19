@@ -9,6 +9,10 @@ venv:
 	source $(ACTIVATE_VENV) && \
 	$(PYTHON) -m pip install -r $(PYTHON_DEPS_FILE)
 
+.PHONY: lint
+lint:
+	mypy src --strict
+
 .PHONY: clean
 clean:
 	$(RM) -r $(VENV_DIR)

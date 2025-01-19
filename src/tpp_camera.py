@@ -25,7 +25,7 @@ import rotation
 class TPPCamera:
     """As in the name.."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Adjust the third-person perspective and camera collision
         models.
         """
@@ -61,7 +61,7 @@ class TPPCamera:
         self.horizontal_coll_sphere.node().setFromCollideMask(
             CollideMask.allOn())
 
-    def change_position(self, player_delta_vector_m: Vec3):
+    def change_position(self, player_delta_vector_m: Vec3) -> None:
         """Relatively change the camera position.
 
         Parameters:
@@ -74,7 +74,7 @@ class TPPCamera:
                            base.camera.getY() + player_delta_vector_m.getY(),
                            base.camera.getZ() + player_delta_vector_m.getZ())
 
-    def fly_over_terrain(self, player: Actor, terrain: ModelRoot):
+    def fly_over_terrain(self, player: Actor, terrain: ModelRoot) -> None:
         """Set the max_pitch_deg to block the camere if is near
         the terrain to prevent overlapping.
 
@@ -101,7 +101,7 @@ class TPPCamera:
                                    - safety_angle_deg
         self.coll_checker.clearColliders()
 
-    def rotate(self, player_delta_vector_m: Vec3):
+    def rotate(self, player_delta_vector_m: Vec3) -> None:
         """Rotate the camera relatively to the player using the magical
         trigonometry.
 

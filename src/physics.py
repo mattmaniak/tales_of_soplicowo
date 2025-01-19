@@ -32,11 +32,11 @@ class Physics:
         self.player_gravity_ray.node().setIntoCollideMask(
             CollideMask.allOff())
 
-    def __del__(self):
+    def __del__(self) -> None:
         """Physical model deletion."""
         self.player_gravity_ray.removeNode()
 
-    def __call__(self, player: Actor, terrain: ModelRoot):
+    def __call__(self, player: Actor, terrain: ModelRoot) -> None:
         """Walk on the terrain.
 
         Parameters:

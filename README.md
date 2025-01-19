@@ -33,6 +33,11 @@ python3 -m pip install -r python_deps.txt
 cd src/main.py
 ```
 
+### Lint
+
+```
+flake8 && make lint
+```
 
 Move the character and look around using the WSAD keys and a mouse. Toggle run or walk by hitting the Shift key. Escape button will exit the app.
 

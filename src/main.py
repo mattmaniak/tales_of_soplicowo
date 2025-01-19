@@ -23,7 +23,7 @@ from world import World
 class Application(ShowBase):
     """Start the app using the Panda3D API."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         """Create the window and start the main loop."""
 
         ShowBase.__init__(self)
@@ -38,7 +38,7 @@ class Application(ShowBase):
         self.physics = Physics(self.world.player)
         base.taskMgr.add(self.__main_loop, "__main_loop")
 
-    def __del__(self):
+    def __del__(self) -> None:
         """Clean resources."""
 
         del self.physics

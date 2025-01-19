@@ -38,14 +38,14 @@ class Keymap:
         toggle_crouch = "lcontrol"
 
 
-def handle_events():
+def handle_events() -> None:
     """Wrap keyboard and mouse calls."""
 
     __poll_keyboard()
     __assign_mouse_pos()
 
 
-def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float):
+def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float) -> None:
     """
     Panda3D describes max. left mouse position as x = -1 and max. right
     as the x = 1. The same thing is with the Y axis. If You move the
@@ -100,7 +100,7 @@ def limit_mouse_pos(min_pitch_deg: float, max_pitch_deg: float):
                              int(mouse_y_onscreen_px))
 
 
-def setup_mouse():
+def setup_mouse() -> None:
     """
     Set the mouse mode from the absolute to the relative
     (RPG-games-like).
@@ -116,7 +116,7 @@ def setup_mouse():
     base.win.requestProperties(new_mouse_settings)
 
 
-def __assign_mouse_pos():
+def __assign_mouse_pos() -> None:
     """
     Store the mouse pos values in variables those will be used in
     another modules.
@@ -131,7 +131,7 @@ def __assign_mouse_pos():
         mouse_pos['y'] = mouse.getY()
 
 
-def __poll_keyboard():
+def __poll_keyboard() -> None:
     """Look for keyboard events."""
 
     global pressed_keys
@@ -144,7 +144,7 @@ def __poll_keyboard():
     base.accept("escape", sys.exit)
 
 
-def __set_key_state(key: str, state: str):
+def __set_key_state(key: str, state: str) -> None:
     """Set the key state to up or down.
 
     Parameters:
