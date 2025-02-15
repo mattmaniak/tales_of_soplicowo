@@ -35,7 +35,7 @@ cd src/main.py
 
 ### Lint
 
-```
+```shell
 flake8 && make lint
 ```
 
